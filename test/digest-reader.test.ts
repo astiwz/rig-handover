@@ -40,7 +40,7 @@ describe('readNight', () => {
       writeFileSync(join(dir, '2026-01-03.jsonl'), '');
       const one = readNight(dir, '2026-01-02')!;
       expect(one.rows[0]).toMatchObject({ job: 'a', owner: null, lastStatus: 'fail', lastError: 'boom' });
-      expect(readNight(dir, '2026-01-03')).toEqual({ rows: [], badLines: 0 });
+      expect(readNight(dir, '2026-01-03')).toEqual({ rows: [], badLines: 0, counts: { ok: 0, retry: 0, fail: 0 } });
     });
 
     it('counts a non-JSON line and an unknown status as bad, never throws', () => {

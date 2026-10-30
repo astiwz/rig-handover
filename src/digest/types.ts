@@ -24,6 +24,8 @@ export type DigestRow = {
 export type NightDigest = {
   rows: DigestRow[];
   badLines: number;
+  // Counts of parsed lines by status.
+  counts: Record<JobStatus, number>;
 };
 
 // Returns null when runs/<night>.jsonl does not exist. Rows are sorted by job.
