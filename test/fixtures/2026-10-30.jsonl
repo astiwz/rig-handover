@@ -1,0 +1,6 @@
+{"at":"2026-10-01T10:30:00+05:30","job":"job/b","status":"ok","owner":"worker"}
+not json
+{"at":"2026-10-01T09:00:00+05:30","job":"job/a","status":"ok","owner":"worker"}
+{"at":"2026-10-01T10:00:00+05:30","job":"job/b","status":"retry","owner":null,"error":"first issue"}
+{"at":"2026-02-30T12:00:00Z","job":"job/c","status":"ok","owner":"worker"}
+{"at":"2026-10-01T11:00:00+05:30","job":"job/c","status":"fail","owner":null,"error":"quota exceeded"}
